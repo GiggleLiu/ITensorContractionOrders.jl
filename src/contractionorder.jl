@@ -178,26 +178,33 @@ function optimize_contraction(tensors::ITensorList; optimizer::CodeOptimizer=Tre
 end
 
 """
-    peak_memory(net::ITensorNetwork) -> Int
+$(TYPEDSIGNATURES)
 """
-OMEinsumContractionOrders.peak_memory(net::ITensorNetwork) = peak_memory(rawcode(net)[1:2]...)
+OMEinsumContractionOrders.peak_memory(net::ITensorNetwork)::Int = peak_memory(rawcode(net)[1:2]...)
 
 """
-    flop(net::ITensorNetwork) -> Int
+$(TYPEDSIGNATURES)
 """
-OMEinsumContractionOrders.flop(net::ITensorNetwork) = flop(rawcode(net)[1:2]...)
+OMEinsumContractionOrders.flop(net::ITensorNetwork)::Int = flop(rawcode(net)[1:2]...)
 
 """
-    timespacereadwrite_complexity(net::ITensorNetwork) -> (tc, sc, rwc)
+$(TYPEDSIGNATURES)
 """
 OMEinsumContractionOrders.timespacereadwrite_complexity(net::ITensorNetwork) = timespacereadwrite_complexity(rawcode(net)[1:2]...)
 
 """
-    timespace_complexity(net::ITensorNetwork) -> (tc, sc)
+$(TYPEDSIGNATURES)
 """
 OMEinsumContractionOrders.timespace_complexity(net::ITensorNetwork) = timespacereadwrite_complexity(rawcode(net)[1:2]...)[1:2]
 
 """
+$(TYPEDSIGNATURES)
+"""
+OMEinsumContractionOrders.contraction_complexity(net::ITensorNetwork) = contraction_complexity(rawcode(net)[1:2]...)
+
+"""
+$(TYPEDSIGNATURES)
+
     label_elimination_order(net::ITensorNetwork) -> Vector
 """
 function OMEinsumContractionOrders.label_elimination_order(net::ITensorNetwork)

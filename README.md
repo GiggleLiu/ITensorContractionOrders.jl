@@ -30,12 +30,11 @@ julia> i, j, k, l = Index(4), Index(5), Index(6), Index(7)
 
 julia> x, y, z = randomITensor(i, j), randomITensor(j, k), randomITensor(k, l);
 
-julia> net = optimize_contraction([x, y, z]; optimizer=TreeSA());
-
-julia> timespacereadwrite_complexity(net)
-(8.169925001442312, 4.807354922057604, 7.39231742277876)
+julia> (tc, sc, rw) = contraction_complexity(net)
+Time complexity (number of element-wise multiplications) = 2^8.169925001442312
+Space complexity (number of elements in the largest intermediate tensor) = 2^4.807354922057604
+Read-write complexity (number of element-wise read and write) = 2^7.39231742277876
 ```
-In the output of `timespacereadwrite_complexity` is a triple log2 number of multiplications, elements in the largest tensor and element-wise read and write.
 
 ## Supporting and Citing
 

@@ -3,7 +3,7 @@ module ITensorContractionOrders
 using ITensors, OMEinsumContractionOrders, DocStringExtensions
 
 # this changes the default warn order!!!!
-set_warn_order!(32)
+ITensors.set_warn_order!(32)
 
 # tensor netork API
 export ITensorNetwork, evaluate

@@ -11,7 +11,7 @@ OMEinsumContractionOrders = "6f22d1fd-8eed-4bb7-9776-e7d684900715"
 [compat]
 DocStringExtensions = "0.9"
 ITensors = "0.3.18"
-OMEinsumContractionOrders = "0.7"
+OMEinsumContractionOrders = "0.8"
 julia = "1"
 
 [extras]

@@ -1,6 +1,11 @@
+using ITensors
 using ITensorContractionOrders
-using Test
+using Test, Documenter
 
-@testset "ITensorContractionOrders.jl" begin
-    # Write your tests here.
+@testset "contractionorder.jl" begin
+  include("contractionorder.jl")
+end
+
+@testset "doctest" begin
+  Documenter.doctest(ITensorContractionOrders; manual=false)
 end

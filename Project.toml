@@ -3,11 +3,20 @@ uuid = "6142b7aa-8f5e-4d19-bf6f-3cb83b105e70"
 authors = ["GiggleLiu <cacate0129@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
+ITensors = "9136182c-28ba-11e9-034c-db9fb085ebd5"
+OMEinsumContractionOrders = "6f22d1fd-8eed-4bb7-9776-e7d684900715"
+
 [compat]
+DocStringExtensions = "0.9"
+ITensors = "0.3.18"
+OMEinsumContractionOrders = "0.7"
 julia = "1"
 
 [extras]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Test"]
+test = ["Documenter", "Test"]

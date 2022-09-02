@@ -20,7 +20,7 @@ $(TYPEDFIELDS)
 The following code creates a tensor network and evaluates it in a sequencial order.
 
 ```jldoctest
-julia> using ITensors, ITensorContractionSequences
+julia> using ITensors, ITensorContractionOrders
 
 julia> i, j, k, l = Index(4), Index(5), Index(6), Index(7);
 
@@ -28,7 +28,7 @@ julia> x, y, z = randomITensor(i, j), randomITensor(j, k), randomITensor(k, l);
 
 julia> it = ITensorNetwork([[x, y] ,z]);
 
-julia> itensor_list = ITensorContractionSequences.flatten(it);  # convert this tensor network to a Vector of ITensors
+julia> itensor_list = ITensorContractionOrders.flatten(it);  # convert this tensor network to a Vector of ITensors
 
 julia> evaluate(it) ≈ foldl(*, itensor_list)
 true
@@ -154,7 +154,7 @@ Returns a [`ITensorNetwork`](@ref) instance, which can be evaluated with the [`e
 
 ### Examples
 ```jldoctest
-julia> using ITensors, ITensorContractionSequences
+julia> using ITensors, ITensorContractionOrders
 
 julia> i, j, k, l = Index(4), Index(5), Index(6), Index(7);
 

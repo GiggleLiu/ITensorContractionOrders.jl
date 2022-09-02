@@ -1,6 +1,6 @@
 # ITensorContractionOrders
 
-This package ports a state of the art contraction order finding package `OMEinsumContractionOrders` to `ITensors`.
+This package ports a state of the art contraction order finding package `OMEinsumContractionOrders` to `ITensors` to enable large scale tensor network contraction.
 
 ## Installation
 <p>

@@ -2,6 +2,9 @@
 
 This package ports a state of the art contraction order finding package `OMEinsumContractionOrders` to `ITensors` to enable large scale tensor network contraction.
 
+[![CI](https://github.com/GiggleLiu/ITensorContractionOrders.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/GiggleLiu/ITensorContractionOrders.jl/actions/workflows/CI.yml)
+[![codecov](https://codecov.io/gh/GiggleLiu/ITensorContractionOrders.jl/branch/main/graph/badge.svg?token=ZkoPZJeW2v)](https://codecov.io/gh/GiggleLiu/ITensorContractionOrders.jl)
+
 ## Installation
 <p>
 ITensorContractionOrders is a &nbsp;
